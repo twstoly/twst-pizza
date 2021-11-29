@@ -148,6 +148,126 @@ $(document).ready(function(){
         }
     })
 
+
+    // pizza NeaPolitan pizza
+
+    $("form#neapolitanPizza").submit(function(event){
+        event.preventDefault();
+
+        var smallRadioTwo = $("input#smallTwo[name='pizzaSizesTwo']:checked").val();
+        var mediumRadioTwo = $("input#mediumTwo[name='pizzaSizesTwo']:checked").val();
+        var largeRadioTwo = $("input#largeTwo[name='pizzaSizesTwo']:checked").val();
+
+        // new Size  
+        // var sizeTwo = new pizzaSizesTwo(smallRadioTwo,mediumRadioTwo,largeRadioTwo);
+
+        var stuffedRadioTwo = $("input#stuffedTwo[name='pizzaCrustsTwo']:checked").val();
+        var crispyRadioTwo = $("input#crispyTwo[name='pizzaCrustsTwo']:checked").val();
+        var gluttenradioTwo = $("input#glutenTwo[name='pizzaCrustsTwo']:checked").val();
+        
+        // new Crusts
+        // var crustsTwo  = new pizzaCrustsTwo(stuffedRadioTwo,crispyRadioTwo,gluttenRadioTwo)
+
+        var pepperoniRadioTwo = $("input#pepperoniTwo[name='pizzaToppingsTwo']:checked").val();
+        var mushroomRadioTwo = $("input#mushroomTwo[name='pizzaToppingsTwo']:checked").val();
+        var sausageradioTwo = $("input#sausageTwo[name='pizzaToppingsTwo']:checked").val();
+        // new Toppings
+        // var toppingsTwo  = new pizzaToppingsTwo(pepperoniRadioTwo,mushroomRadioTwo,sausageRadioTwo)
+
+        // Small section radio.
+        if(smallRadioTwo == undefined && stuffedRadioTwo == undefined && pepperoniRadioTwo == undefined){
+            alert("Make sure you select all fields")
+        }
+        else if(smallRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && crispyRadioTwo && mushroomRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && gluttenradioTwo && mushroomRadioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && stuffedRadioTwo && sausageradioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && crispyRadioTwo && sausageradioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(smallRadioTwo && gluttenradioTwo && sausageradioTwo){
+            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }
+        // Medium radio section
+        else if(mediumRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && crispyRadioTwo && mushroomRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && gluttenradioTwo && mushroomRadioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && stuffedRadioTwo && sausageradioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && crispyRadioTwo && sausageradioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(mediumRadioTwo && gluttenradioTwo && sausageradioTwo){
+            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }
+        // Large radio section
+        else if(largeRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && crispyRadioTwo && mushroomRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && gluttenradioTwo && mushroomRadioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && stuffedRadioTwo && sausageradioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && crispyRadioTwo && sausageradioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }else if(largeRadioTwo && gluttenradioTwo && sausageradioTwo){
+            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
+            alert("The total amounts to: " + value)
+        }
+    })
+
+
+
 })
 
 
