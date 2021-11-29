@@ -55,102 +55,475 @@ $(document).ready(function(){
         var sausageradio = $("input#sausage[name='pizzaToppings']:checked").val();
         // new Toppings
         var toppings  = new pizzaToppings(pepperoniRadio,mushroomRadio,sausageradio)
+        // Switch
+
+        var inputOne = $("input#inputOneValue").val();
+        // Switch Toggle
+        var deliveryRadio = $("input#delivery:checked").val();
 
         // Small section radio.
-        if(smallRadio == undefined && stuffedRadio == undefined && pepperoniRadio == undefined){
-            alert("Make sure you select all fields")
+
+        if(deliveryRadio){
+            var location = prompt("Enter Delivery location: ");
+            if(location == ""){
+                alert("You have not entered a delivery location")
+            }else{
+                alert ("Your order will be delivered in " + location + " at an fee of 500Ksh");
+                if(smallRadio && stuffedRadio && pepperoniRadio && inputOne && deliveryRadio){
+            
+                    var  value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && crispyradio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && glutenRadio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && stuffedRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && crispyradio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && stuffedRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && crispyradio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadio && glutenRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Medium Pizza delivery section
+                else if(mediumRadio && stuffedRadio && pepperoniRadio && inputOne && deliveryRadio){
+            
+                    var  value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && crispyradio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && glutenRadio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && stuffedRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && crispyradio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && stuffedRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && crispyradio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadio && glutenRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Medium " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Large Radio delivery
+                else if(largeRadio && stuffedRadio && pepperoniRadio && inputOne && deliveryRadio){
+                    var  value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && crispyradio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && glutenRadio && pepperoniRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && stuffedRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && crispyradio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && glutenRadio && mushroomRadio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && stuffedRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && crispyradio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadio && glutenRadio && sausageradio && inputOne && deliveryRadio){
+                    var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(sausageradio)
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadio);
+                    var checkout = "Size of pizza: Large " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+            }
         }
-        else if(smallRadio && stuffedRadio && pepperoniRadio){
-            var  value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
-             alert("The total amounts to: " + value)
-        }else if(smallRadio && crispyradio && pepperoniRadio){
-            var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && glutenRadio && pepperoniRadio){
-            var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && stuffedRadio && mushroomRadio){
-            var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && crispyradio && mushroomRadio){
-            var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && glutenRadio && mushroomRadio){
-            var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && stuffedRadio && sausageradio){
-            var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && crispyradio && sausageradio){
-            var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadio && glutenRadio && sausageradio){
-            var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
+        else if(smallRadio){
+            if(smallRadio == undefined && stuffedRadio == undefined && pepperoniRadio == undefined){
+                alert("Make sure you select all fields")
+            }else if(smallRadio){
+                if(smallRadio && stuffedRadio && pepperoniRadio && inputOne){
+                    var  value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && crispyradio && pepperoniRadio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && glutenRadio && pepperoniRadio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && stuffedRadio && mushroomRadio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && crispyradio && mushroomRadio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && glutenRadio && mushroomRadio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && stuffedRadio && sausageradio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && crispyradio && sausageradio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadio && glutenRadio && sausageradio && inputOne){
+                    var value = parseInt(smallRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
+                    var multiplier = parseInt(inputOne);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }
+            }
         }
-        // Medium radio section
-        else if(mediumRadio && stuffedRadio && pepperoniRadio){
-            var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && crispyradio && pepperoniRadio){
-            var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && glutenRadio && pepperoniRadio){
-            var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && stuffedRadio && mushroomRadio){
-            var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && crispyradio && mushroomRadio){
-            var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && glutenRadio && mushroomRadio){
-            var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && stuffedRadio && sausageradio){
-            var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && crispyradio && sausageradio){
-            var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadio && glutenRadio && sausageradio){
-            var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
+        // Medium section
+        else if(mediumRadio){
+            if(mediumRadio && stuffedRadio && pepperoniRadio && inputOne){
+                var  value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && crispyradio && pepperoniRadio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && glutenRadio && pepperoniRadio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && stuffedRadio && mushroomRadio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && crispyradio && mushroomRadio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && glutenRadio && mushroomRadio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && stuffedRadio && sausageradio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && crispyradio && sausageradio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadio && glutenRadio && sausageradio && inputOne){
+                var value = parseInt(mediumRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
-        // Large radio section
-        else if(largeRadio && stuffedRadio && pepperoniRadio){
-            var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && crispyradio && pepperoniRadio){
-            var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && glutenRadio && pepperoniRadio){
-            var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && stuffedRadio && mushroomRadio){
-            var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && crispyradio && mushroomRadio){
-            var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && glutenRadio && mushroomRadio){
-            var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && stuffedRadio && sausageradio){
-            var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && crispyradio && sausageradio){
-            var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadio && glutenRadio && sausageradio){
-            var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
-            alert("The total amounts to: " + value)
+        else if(largeRadio){
+            if(largeRadio && stuffedRadio && pepperoniRadio && inputOne){
+                var  value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && crispyradio && pepperoniRadio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && glutenRadio && pepperoniRadio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(pepperoniRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && stuffedRadio && mushroomRadio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Mushroom= " + mushroomRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && crispyradio && mushroomRadio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && glutenRadio && mushroomRadio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(mushroomRadio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && stuffedRadio && sausageradio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(stuffedRadio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Stuffed = " + stuffedRadio + '\n' + "Toppings: Sausage= " + sausageradio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && crispyradio && sausageradio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(crispyradio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Crispy = " + crispyradio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadio && glutenRadio && sausageradio && inputOne){
+                var value = parseInt(largeRadio) + parseInt(glutenRadio) + parseInt(sausageradio) 
+                var multiplier = parseInt(inputOne);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadio + '\n' + "Crusts: Gluten = " + glutenRadio + '\n' + "Toppings: Pepperoni= " + pepperoniRadio + '\n' + "Amount: " + inputOne + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
     })
 
-
     // pizza NeaPolitan pizza
-
     $("form#neapolitanPizza").submit(function(event){
         event.preventDefault();
 
@@ -158,114 +531,486 @@ $(document).ready(function(){
         var mediumRadioTwo = $("input#mediumTwo[name='pizzaSizesTwo']:checked").val();
         var largeRadioTwo = $("input#largeTwo[name='pizzaSizesTwo']:checked").val();
 
-        // new Size  
-        // var sizeTwo = new pizzaSizesTwo(smallRadioTwo,mediumRadioTwo,largeRadioTwo);
+        // new Size
+        // var size = new pizzaSizesTwo(smallRadioTwo,mediumRadioTwo,largeRadioTwo);
 
         var stuffedRadioTwo = $("input#stuffedTwo[name='pizzaCrustsTwo']:checked").val();
-        var crispyRadioTwo = $("input#crispyTwo[name='pizzaCrustsTwo']:checked").val();
-        var gluttenradioTwo = $("input#glutenTwo[name='pizzaCrustsTwo']:checked").val();
-        
-        // new Crusts
-        // var crustsTwo  = new pizzaCrustsTwo(stuffedRadioTwo,crispyRadioTwo,gluttenRadioTwo)
+        var crispyradioTwo = $("input#crispyTwo[name='pizzaCrustsTwo']:checked").val();
+        var glutenRadioTwo = $("input#glutenTwo[name='pizzaCrustsTwo']:checked").val();
 
-        var pepperoniRadioTwo = $("input#pepperoniTwo[name='pizzaToppingsTwo']:checked").val();
-        var mushroomRadioTwo = $("input#mushroomTwo[name='pizzaToppingsTwo']:checked").val();
-        var sausageradioTwo = $("input#sausageTwo[name='pizzaToppingsTwo']:checked").val();
-        // new Toppings
-        // var toppingsTwo  = new pizzaToppingsTwo(pepperoniRadioTwo,mushroomRadioTwo,sausageRadioTwo)
+        var pepperoniRadioTwo = $("input#pepperoniTwo:checked").val();
+        var mushroomRadioTwo = $("input#mushroomTwo:checked").val();
+        var sausageradioTwo = $("input#sausagetwo:checked").val();
+
+
+        // alert(pepperoniRadioTwo)
+        // alert(mushroomRadioTwo)
+        // alert(sausageradioTwo)
+
+        var inputTwo = $("input#inputTwoValue").val();
+        // Switch Toggle
+        var deliveryRadioTwo = $("input#deliveryTwo:checked").val();
 
         // Small section radio.
-        if(smallRadioTwo == undefined && stuffedRadioTwo == undefined && pepperoniRadioTwo == undefined){
-            alert("Make sure you select all fields")
+        
+        if(deliveryRadioTwo){
+            var locationTwo = prompt("Enter Delivery locationTwo: ");
+            if(locationTwo == ""){
+                alert("You have not entered a delivery locationTwo")
+            }else{
+                alert ("Your order will be delivered in " + locationTwo + " at an fee of 500Ksh");
+                if(smallRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var  value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Medium Pizza delivery section
+                else if(mediumRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+            
+                    var  value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Medium " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Large Radio delivery
+                else if(largeRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var  value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadioTwo +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo && deliveryRadioTwo){
+                    var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo)
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioTwo);
+                    var checkout = "Size of pizza: Large " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+            }
         }
-        else if(smallRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && crispyRadioTwo && mushroomRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && gluttenradioTwo && mushroomRadioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && stuffedRadioTwo && sausageradioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && crispyRadioTwo && sausageradioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioTwo && gluttenradioTwo && sausageradioTwo){
-            var value = parseInt(smallRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
+        else if(smallRadioTwo){
+            if(smallRadioTwo == undefined && stuffedRadioTwo == undefined && pepperoniRadioTwo == undefined){
+                alert("Make sure you select all fields")
+            }else if(smallRadioTwo){
+                if(smallRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo){
+                    var  value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo){
+                    var value = parseInt(smallRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo) 
+                    var multiplier = parseInt(inputTwo);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }
+            }
         }
-        // Medium radio section
-        else if(mediumRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && crispyRadioTwo && mushroomRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && gluttenradioTwo && mushroomRadioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && stuffedRadioTwo && sausageradioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && crispyRadioTwo && sausageradioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioTwo && gluttenradioTwo && sausageradioTwo){
-            var value = parseInt(mediumRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
+        // Medium section
+        else if(mediumRadioTwo){
+            if(mediumRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo){
+                var  value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(mediumRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
-        // Large radio section
-        else if(largeRadioTwo && stuffedRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && crispyRadioTwo && pepperoniRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && gluttenradioTwo && pepperoniRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(pepperoniRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && stuffedRadioTwo && mushroomRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && crispyRadioTwo && mushroomRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && gluttenradioTwo && mushroomRadioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(mushroomRadioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && stuffedRadioTwo && sausageradioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && crispyRadioTwo && sausageradioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(crispyRadioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioTwo && gluttenradioTwo && sausageradioTwo){
-            var value = parseInt(largeRadioTwo) + parseInt(gluttenradioTwo) + parseInt(sausageradioTwo) 
-            alert("The total amounts to: " + value)
+        else if(largeRadioTwo){
+            if(largeRadioTwo && stuffedRadioTwo && pepperoniRadioTwo && inputTwo){
+                var  value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && crispyradioTwo && pepperoniRadioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && glutenRadioTwo && pepperoniRadioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(pepperoniRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Pepperoni= " + pepperoniRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && stuffedRadioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && crispyradioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && glutenRadioTwo && mushroomRadioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(mushroomRadioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Mushroom= " + mushroomRadioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && stuffedRadioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(stuffedRadioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Stuffed = " + stuffedRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && crispyradioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(crispyradioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Crispy = " + crispyradioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioTwo && glutenRadioTwo && sausageradioTwo && inputTwo){
+                var value = parseInt(largeRadioTwo) + parseInt(glutenRadioTwo) + parseInt(sausageradioTwo) 
+                var multiplier = parseInt(inputTwo);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioTwo + '\n' + "Crusts: Gluten = " + glutenRadioTwo + '\n' + "Toppings: Sausage= " + sausageradioTwo + '\n' + "Amount: " + inputTwo + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
     })
-
 
     //Sicilian
     $("form#sicilian").submit(function(event){
@@ -274,466 +1019,485 @@ $(document).ready(function(){
         var smallRadioThree = $("input#smallThree[name='pizzaSizesThree']:checked").val();
         var mediumRadioThree = $("input#mediumThree[name='pizzaSizesThree']:checked").val();
         var largeRadioThree = $("input#largeThree[name='pizzaSizesThree']:checked").val();
-        
 
-        // new Size  
-        // var sizeTwo = new pizzaSizesTwo(smallRadioThree,mediumRadioThree,largeRadioThree);
+        // new Size
+        // var size = new pizzaSizesThree(smallRadioThree,mediumRadioThree,largeRadioThree);
 
         var stuffedRadioThree = $("input#stuffedThree[name='pizzaCrustsThree']:checked").val();
-        var crispyRadioThree = $("input#crispyThree[name='pizzaCrustsThree']:checked").val();
-        var gluttenradioThree = $("input#glutenThree[name='pizzaCrustsThree']:checked").val();
-        
-        // new Crusts
-        // var crustsTwo  = new pizzaCrustsTwo(stuffedRadioThree,crispyRadioThree,gluttenRadioThree)
+        var crispyradioThree = $("input#crispyThree[name='pizzaCrustsThree']:checked").val();
+        var glutenRadioThree = $("input#glutenThree[name='pizzaCrustsThree']:checked").val();
 
-        var pepperoniRadioThree = $("input#pepperoniThree[name='pizzaToppingsThree']:checked").val();
-        var mushroomRadioThree = $("input#mushroomThree[name='pizzaToppingsThree']:checked").val();
-        var sausageradioThree = $("input#sausageThree[name='pizzaToppingsThree']:checked").val();
-        // new Toppings
-        // var toppingsTwo  = new pizzaToppingsTwo(pepperoniRadioThree,mushroomRadioThree,sausageRadioThree)
-
-        // Small section radio.
-        if(smallRadioThree == undefined && stuffedRadioThree == undefined && pepperoniRadioThree == undefined){
-            alert("Make sure you select all fields")
-        }
-        else if(smallRadioThree && stuffedRadioThree && pepperoniRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && crispyRadioThree && pepperoniRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(crispyRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && gluttenradioThree && pepperoniRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(gluttenradioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && stuffedRadioThree && mushroomRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && crispyRadioThree && mushroomRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(crispyRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && gluttenradioThree && mushroomRadioThree){
-            var value = parseInt(smallRadioThree) + parseInt(gluttenradioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && stuffedRadioThree && sausageradioThree){
-            var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && crispyRadioThree && sausageradioThree){
-            var value = parseInt(smallRadioThree) + parseInt(crispyRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioThree && gluttenradioThree && sausageradioThree){
-            var value = parseInt(smallRadioThree) + parseInt(gluttenradioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }
-        // Medium radio section
-        else if(mediumRadioThree && stuffedRadioThree && pepperoniRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && crispyRadioThree && pepperoniRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(crispyRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && gluttenradioThree && pepperoniRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(gluttenradioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && stuffedRadioThree && mushroomRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && crispyRadioThree && mushroomRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(crispyRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && gluttenradioThree && mushroomRadioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(gluttenradioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && stuffedRadioThree && sausageradioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && crispyRadioThree && sausageradioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(crispyRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioThree && gluttenradioThree && sausageradioThree){
-            var value = parseInt(mediumRadioThree) + parseInt(gluttenradioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }
-        // Large radio section
-        else if(largeRadioThree && stuffedRadioThree && pepperoniRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && crispyRadioThree && pepperoniRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(crispyRadioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && gluttenradioThree && pepperoniRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(gluttenradioThree) + parseInt(pepperoniRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && stuffedRadioThree && mushroomRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && crispyRadioThree && mushroomRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(crispyRadioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && gluttenradioThree && mushroomRadioThree){
-            var value = parseInt(largeRadioThree) + parseInt(gluttenradioThree) + parseInt(mushroomRadioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && stuffedRadioThree && sausageradioThree){
-            var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && crispyRadioThree && sausageradioThree){
-            var value = parseInt(largeRadioThree) + parseInt(crispyRadioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioThree && gluttenradioThree && sausageradioThree){
-            var value = parseInt(largeRadioThree) + parseInt(gluttenradioThree) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }
-    })
+        var pepperoniRadioThree = $("input#pepperoniThree:checked").val();
+        var mushroomRadioThree = $("input#mushroomThree:checked").val();
+        var sausageradioThree = $("input#sausageThree:checked").val();
 
 
-    //margherita
-    $("form#margherita").submit(function(event){
-        event.preventDefault();
+        // alert(pepperoniRadioThree)
+        // alert(mushroomRadioThree)
+        // alert(sausageradioThree)
 
-        var smallRadioEight = $("input#smallFour[name='pizzaSizesFour']:checked").val();
-        var mediumRadioFour = $("input#mediumFour[name='pizzaSizesFour']:checked").val();
-        var largeRadioFour  = $("input#largeFour[name='pizzaSizesFour']:checked").val();
-        
-
-        // new Size  
-        // var sizeTwo = new pizzaSizesTwo(smallRadioFour,mediumRadioFour,largeRadioFour);
-
-        var stuffedRadioFour = $("input#stuffedFour[name='pizzaCrustsFour']:checked").val();
-        var crispyRadioFour = $("input#crispyFour[name='pizzaCrustsFour']:checked").val();
-        var gluttenradioFour = $("input#glutenFour[name='pizzaCrustsFour']:checked").val();
-        
-        // new Crusts
-        // var crustsTwo  = new pizzaCrustsTwo(stuffedRadioFour,crispyRadioFour,gluttenRadioFour)
-
-        var pepperoniRadioFour = $("input#pepperoniFour[name='pizzaToppingsFour']:checked").val();
-        var mushroomRadioFour = $("input#mushroomFour[name='pizzaToppingsFour']:checked").val();
-        var sausageradioFour = $("input#sausageFour[name='pizzaToppingsFour']:checked").val();
-        // new Toppings
-        // var toppingsTwo  = new pizzaToppingsTwo(pepperoniRadioFour,mushroomRadioFour,sausageRadioFour)
-        
+        var inputThree = $("input#inputThreeValue").val();
+        // Switch Toggle
+        var deliveryRadioThree = $("input#deliveryThree:checked").val();
 
         // Small section radio.
-        if(smallRadioFour == undefined && stuffedRadioFour == undefined && pepperoniRadioFour == undefined){
+        
+        if(deliveryRadioThree){
+            var locationThree = prompt("Enter Delivery locationThree: ");
+            if(locationThree == ""){
+                alert("You have not entered a delivery locationThree")
+            }else{
+                alert ("Your order will be delivered in " + locationThree + " at an fee of 500Ksh");
+                if(smallRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var  value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && crispyradioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && crispyradioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && stuffedRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && crispyradioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioThree && glutenRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Medium Pizza delivery section
+                else if(mediumRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
             
-            alert("Make sure you select all fields");
+                    var  value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && crispyradioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && crispyradioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && stuffedRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && crispyradioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioThree && glutenRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Medium " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Large Radio delivery
+                else if(largeRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var  value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && crispyradioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && crispyradioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && glutenRadioThree && mushroomRadioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && stuffedRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && crispyradioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadioThree +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioThree && glutenRadioThree && sausageradioThree && inputThree && deliveryRadioThree){
+                    var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree)
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioThree);
+                    var checkout = "Size of pizza: Large " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+            }
         }
-        else if(smallRadioFour && stuffedRadioFour && pepperoniRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && crispyRadioFour && pepperoniRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(crispyRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && gluttenradioFour && pepperoniRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(gluttenradioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && stuffedRadioFour && mushroomRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && crispyRadioFour && mushroomRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(crispyRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && gluttenradioFour && mushroomRadioFour){
-            var value = parseInt(smallRadioFour) + parseInt(gluttenradioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && stuffedRadioFour && sausageradioFour){
-            var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && crispyRadioFour && sausageradioFour){
-            var value = parseInt(smallRadioFour) + parseInt(crispyRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFour && gluttenradioFour && sausageradioFour){
-            var value = parseInt(smallRadioFour) + parseInt(gluttenradioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
+        else if(smallRadioThree){
+            if(smallRadioThree == undefined && stuffedRadioThree == undefined && pepperoniRadioThree == undefined){
+                alert("Make sure you select all fields")
+            }else if(smallRadioThree){
+                if(smallRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree){
+                    var  value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && crispyradioThree && pepperoniRadioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && crispyradioThree && mushroomRadioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && glutenRadioThree && mushroomRadioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && stuffedRadioThree && sausageradioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && crispyradioThree && sausageradioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioThree && glutenRadioThree && sausageradioThree && inputThree){
+                    var value = parseInt(smallRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree) 
+                    var multiplier = parseInt(inputThree);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }
+            }
         }
-        // Medium radio section
-        else if(mediumRadioFour && stuffedRadioFour && pepperoniRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && crispyRadioFour && pepperoniRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(crispyRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && gluttenradioFour && pepperoniRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(gluttenradioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && stuffedRadioFour && mushroomRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && crispyRadioFour && mushroomRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(crispyRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && gluttenradioFour && mushroomRadioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(gluttenradioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && stuffedRadioFour && sausageradioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && crispyRadioFour && sausageradioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(crispyRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFour && gluttenradioFour && sausageradioFour){
-            var value = parseInt(mediumRadioFour) + parseInt(gluttenradioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
+        // Medium section
+        else if(mediumRadioThree){
+            if(mediumRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree){
+                var  value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && crispyradioThree && pepperoniRadioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && crispyradioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && glutenRadioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && stuffedRadioThree && sausageradioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && crispyradioThree && sausageradioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioThree && glutenRadioThree && sausageradioThree && inputThree){
+                var value = parseInt(mediumRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
-        // Large radio section
-        else if(largeRadioFour && stuffedRadioFour && pepperoniRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && crispyRadioFour && pepperoniRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(crispyRadioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && gluttenradioFour && pepperoniRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(gluttenradioFour) + parseInt(pepperoniRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && stuffedRadioFour && mushroomRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && crispyRadioFour && mushroomRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(crispyRadioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && gluttenradioFour && mushroomRadioFour){
-            var value = parseInt(largeRadioFour) + parseInt(gluttenradioFour) + parseInt(mushroomRadioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && stuffedRadioFour && sausageradioFour){
-            var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && crispyRadioFour && sausageradioFour){
-            var value = parseInt(largeRadioFour) + parseInt(crispyRadioFour) + parseInt(sausageradioFour) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFour && gluttenradioFour && sausageradioFour){
-            var value = parseInt(largeRadioFour) + parseInt(gluttenradioFour) + parseInt(sausageradioThree) 
-            alert("The total amounts to: " + value)
-        }
-    })
-
-    // Hawaiian
-    $("form#hawaiian").submit(function(event){
-        event.preventDefault();
-
-        var smallRadioFive = $("input#smallFive[name='pizzaSizesFive']:checked").val();
-        var mediumRadioFive = $("input#mediumFive[name='pizzaSizesFive']:checked").val();
-        var largeRadioFive = $("input#largeFive[name='pizzaSizesFive']:checked").val();
-        // new Size  
-        // var sizeFive = new pizzaSizesFive(smallRadioFive,mediumRadioFive,largeRadioFive);
-
-        var stuffedRadioFive = $("input#stuffedFive[name='pizzaCrustsFive']:checked").val();
-        var crispyRadioFive = $("input#crispyFive[name='pizzaCrustsFive']:checked").val();
-        var gluttenradioFive = $("input#glutenFive[name='pizzaCrustsFive']:checked").val();
-        
-        // new Crusts
-        // var crustsFive  = new pizzaCrustsFive(stuffedRadioFive,crispyRadioFive,gluttenRadioFive)
-
-        var pepperoniRadioFive = $("input#pepperoniFive[name='pizzaToppingsFive']:checked").val();
-        var mushroomRadioFive = $("input#mushroomFive[name='pizzaToppingsFive']:checked").val();
-        var sausageradioFive = $("input#sausageFive[name='pizzaToppingsFive']:checked").val();
-        // new Toppings
-        // var toppingsFive  = new pizzaToppingsFive(pepperoniRadioFive,mushroomRadioFive,sausageRadioFive)
-
-        // Small section radio.
-        if(smallRadioFive == undefined && stuffedRadioFive == undefined && pepperoniRadioFive == undefined){
-            alert("Make sure you select all fields")
-        }
-        else if(smallRadioFive && stuffedRadioFive && pepperoniRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(stuffedRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && crispyRadioFive && pepperoniRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(crispyRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && gluttenradioFive && pepperoniRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(gluttenradioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && stuffedRadioFive && mushroomRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(stuffedRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && crispyRadioFive && mushroomRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(crispyRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && gluttenradioFive && mushroomRadioFive){
-            var value = parseInt(smallRadioFive) + parseInt(gluttenradioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && stuffedRadioFive && sausageradioFive){
-            var value = parseInt(smallRadioFive) + parseInt(stuffedRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && crispyRadioFive && sausageradioFive){
-            var value = parseInt(smallRadioFive) + parseInt(crispyRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioFive && gluttenradioFive && sausageradioFive){
-            var value = parseInt(smallRadioFive) + parseInt(gluttenradioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }
-        // Medium radio section
-        else if(mediumRadioFive && stuffedRadioFive && pepperoniRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(stuffedRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && crispyRadioFive && pepperoniRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(crispyRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && gluttenradioFive && pepperoniRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(gluttenradioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && stuffedRadioFive && mushroomRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(stuffedRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && crispyRadioFive && mushroomRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(crispyRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && gluttenradioFive && mushroomRadioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(gluttenradioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && stuffedRadioFive && sausageradioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(stuffedRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && crispyRadioFive && sausageradioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(crispyRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioFive && gluttenradioFive && sausageradioFive){
-            var value = parseInt(mediumRadioFive) + parseInt(gluttenradioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }
-        // Large radio section
-        else if(largeRadioFive && stuffedRadioFive && pepperoniRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(stuffedRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && crispyRadioFive && pepperoniRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(crispyRadioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && gluttenradioFive && pepperoniRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(gluttenradioFive) + parseInt(pepperoniRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && stuffedRadioFive && mushroomRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(stuffedRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && crispyRadioFive && mushroomRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(crispyRadioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && gluttenradioFive && mushroomRadioFive){
-            var value = parseInt(largeRadioFive) + parseInt(gluttenradioFive) + parseInt(mushroomRadioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && stuffedRadioFive && sausageradioFive){
-            var value = parseInt(largeRadioFive) + parseInt(stuffedRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && crispyRadioFive && sausageradioFive){
-            var value = parseInt(largeRadioFive) + parseInt(crispyRadioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioFive && gluttenradioFive && sausageradioFive){
-            var value = parseInt(largeRadioFive) + parseInt(gluttenradioFive) + parseInt(sausageradioFive) 
-            alert("The total amounts to: " + value)
-        }
-    })
-
-
-    //meatpizza
-
-    $("form#meatPizza").submit(function(event){
-        event.preventDefault();
-
-        var smallRadioSix = $("input#smallSix[name='pizzaSizesSix']:checked").val();
-        var mediumRadioSix = $("input#mediumSix[name='pizzaSizesSix']:checked").val();
-        var largeRadioSix = $("input#largeSix[name='pizzaSizesSix']:checked").val();
-
-        // new Size  
-        // var sizeSix = new pizzaSizesSix(smallRadioSix,mediumRadioSix,largeRadioSix);
-
-        var stuffedRadioSix = $("input#stuffedSix[name='pizzaCrustsSix']:checked").val();
-        var crispyRadioSix = $("input#crispySix[name='pizzaCrustsSix']:checked").val();
-        var gluttenradioSix = $("input#glutenSix[name='pizzaCrustsSix']:checked").val();
-        
-        // new Crusts
-        // var crustsSix  = new pizzaCrustsSix(stuffedRadioSix,crispyRadioSix,gluttenRadioSix)
-
-        var pepperoniRadioSix = $("input#pepperoniSix[name='pizzaToppingsSix']:checked").val();
-        var mushroomRadioSix = $("input#mushroomSix[name='pizzaToppingsSix']:checked").val();
-        var sausageradioSix = $("input#sausageSix[name='pizzaToppingsSix']:checked").val();
-        // new Toppings
-        // var toppingsSix  = new pizzaToppingsSix(pepperoniRadioSix,mushroomRadioSix,sausageRadioSix)
-
-        // Small section radio.
-        if(smallRadioSix == undefined && stuffedRadioSix == undefined && pepperoniRadioSix == undefined){
-            alert("Make sure you select all fields")
-        }
-        else if(smallRadioSix && stuffedRadioSix && pepperoniRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(stuffedRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && crispyRadioSix && pepperoniRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(crispyRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && gluttenradioSix && pepperoniRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(gluttenradioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && stuffedRadioSix && mushroomRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(stuffedRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && crispyRadioSix && mushroomRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(crispyRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && gluttenradioSix && mushroomRadioSix){
-            var value = parseInt(smallRadioSix) + parseInt(gluttenradioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && stuffedRadioSix && sausageradioSix){
-            var value = parseInt(smallRadioSix) + parseInt(stuffedRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && crispyRadioSix && sausageradioSix){
-            var value = parseInt(smallRadioSix) + parseInt(crispyRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSix && gluttenradioSix && sausageradioSix){
-            var value = parseInt(smallRadioSix) + parseInt(gluttenradioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }
-        // Medium radio section
-        else if(mediumRadioSix && stuffedRadioSix && pepperoniRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(stuffedRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && crispyRadioSix && pepperoniRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(crispyRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && gluttenradioSix && pepperoniRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(gluttenradioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && stuffedRadioSix && mushroomRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(stuffedRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && crispyRadioSix && mushroomRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(crispyRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && gluttenradioSix && mushroomRadioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(gluttenradioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && stuffedRadioSix && sausageradioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(stuffedRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && crispyRadioSix && sausageradioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(crispyRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSix && gluttenradioSix && sausageradioSix){
-            var value = parseInt(mediumRadioSix) + parseInt(gluttenradioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }
-        // Large radio section
-        else if(largeRadioSix && stuffedRadioSix && pepperoniRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(stuffedRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && crispyRadioSix && pepperoniRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(crispyRadioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && gluttenradioSix && pepperoniRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(gluttenradioSix) + parseInt(pepperoniRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && stuffedRadioSix && mushroomRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(stuffedRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && crispyRadioSix && mushroomRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(crispyRadioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && gluttenradioSix && mushroomRadioSix){
-            var value = parseInt(largeRadioSix) + parseInt(gluttenradioSix) + parseInt(mushroomRadioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && stuffedRadioSix && sausageradioSix){
-            var value = parseInt(largeRadioSix) + parseInt(stuffedRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && crispyRadioSix && sausageradioSix){
-            var value = parseInt(largeRadioSix) + parseInt(crispyRadioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSix && gluttenradioSix && sausageradioSix){
-            var value = parseInt(largeRadioSix) + parseInt(gluttenradioSix) + parseInt(sausageradioSix) 
-            alert("The total amounts to: " + value)
+        else if(largeRadioThree){
+            if(largeRadioThree && stuffedRadioThree && pepperoniRadioThree && inputThree){
+                var  value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && crispyradioThree && pepperoniRadioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && glutenRadioThree && pepperoniRadioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(pepperoniRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Pepperoni= " + pepperoniRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && stuffedRadioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && crispyradioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && glutenRadioThree && mushroomRadioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(mushroomRadioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Mushroom= " + mushroomRadioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && stuffedRadioThree && sausageradioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(stuffedRadioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Stuffed = " + stuffedRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && crispyradioThree && sausageradioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(crispyradioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Crispy = " + crispyradioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioThree && glutenRadioThree && sausageradioThree && inputThree){
+                var value = parseInt(largeRadioThree) + parseInt(glutenRadioThree) + parseInt(sausageradioThree) 
+                var multiplier = parseInt(inputThree);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioThree + '\n' + "Crusts: Gluten = " + glutenRadioThree + '\n' + "Toppings: Sausage= " + sausageradioThree + '\n' + "Amount: " + inputThree + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
     })
 
