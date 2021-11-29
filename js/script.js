@@ -1,3 +1,5 @@
+
+// Business Logic
 function pizzaSizes(small,medium,large){
     this.small = small;
     this. medium = medium;
@@ -14,22 +16,10 @@ function pizzaToppings(pepperoni,mushroom,sausage){
     this.mushroom = mushroom;
     this.sausage = sausage;
 }
-function pizzaSizesTwo(smallTwo,mediumTwo,largeTwo){
-    this.smallTwo = smallTwo;
-    this. mediumTwo = mediumTwo;
-    this.largeTwo = largeTwo;
-}
-function pizzaCrustsTwo(stuffedTwo,crispyTwo,glutenTwo){
-    this.stuffedTwo = stuffedTwo;
-    this.crispyTwo = crispyTwo;
-    this.glutenTwo = glutenTwo;
+pizzaToppings.prototype.fullInformation = function (){
+    return firstOrder + secondOrder;
 }
 
-function pizzaToppingsTwo(pepperoniTwo,mushroomTwo,sausageTwo){
-    this.pepperoniTwo = pepperoniTwo;
-    this.mushroomTwo = mushroomTwo;
-    this.sausageTwo = sausageTwo;
-}
 
 
 // User Interface
@@ -522,7 +512,6 @@ $(document).ready(function(){
             }
         }
     })
-
     // pizza NeaPolitan pizza
     $("form#neapolitanPizza").submit(function(event){
         event.preventDefault();
@@ -1011,7 +1000,6 @@ $(document).ready(function(){
             }
         }
     })
-
     //Sicilian
     $("form#sicilian").submit(function(event){
         event.preventDefault();
@@ -1500,126 +1488,494 @@ $(document).ready(function(){
             }
         }
     })
-
-
     //veggiePizza
     $("form#veggiePizza").submit(function(event){
         event.preventDefault();
 
-        var smallRadioSeven = $("input#smallSeven[name='pizzaSizesSeven']:checked").val();
-        var mediumRadioSeven = $("input#mediumSeven[name='pizzaSizesSeven']:checked").val();
-        var largeRadioSeven = $("input#largeSeven[name='pizzaSizesSeven']:checked").val();
-        
+        var smallRadioFour = $("input#smallFour[name='pizzaSizesFour']:checked").val();
+        var mediumRadioFour = $("input#mediumFour[name='pizzaSizesFour']:checked").val();
+        var largeRadioFour = $("input#largeFour[name='pizzaSizesFour']:checked").val();
 
-        // new Size  
-        // var sizeTwo = new pizzaSizesTwo(smallRadioSeven,mediumRadioSeven,largeRadioSeven);
+        // new Size
+        // var size = new pizzaSizesFour(smallRadioFour,mediumRadioFour,largeRadioFour);
 
-        var stuffedRadioSeven = $("input#stuffedSeven[name='pizzaCrustsSeven']:checked").val();
-        var crispyRadioSeven = $("input#crispySeven[name='pizzaCrustsSeven']:checked").val();
-        var gluttenradioSeven = $("input#glutenSeven[name='pizzaCrustsSeven']:checked").val();
-        
-        // new Crusts
-        // var crustsTwo  = new pizzaCrustsTwo(stuffedRadioSeven,crispyRadioSeven,gluttenRadioSeven)
+        var stuffedRadioFour = $("input#stuffedFour[name='pizzaCrustsFour']:checked").val();
+        var crispyradioFour = $("input#crispyFour[name='pizzaCrustsFour']:checked").val();
+        var glutenRadioFour = $("input#glutenFour[name='pizzaCrustsFour']:checked").val();
 
-        var pepperoniRadioSeven = $("input#pepperoniSeven[name='pizzaToppingsSeven']:checked").val();
-        var mushroomRadioSeven = $("input#mushroomSeven[name='pizzaToppingsSeven']:checked").val();
-        var sausageradioSeven = $("input#sausageSeven[name='pizzaToppingsSeven']:checked").val();
-        // new Toppings
-        // var toppingsTwo  = new pizzaToppingsTwo(pepperoniRadioSeven,mushroomRadioSeven,sausageRadioSeven)
+        var pepperoniRadioFour = $("input#pepperoniFour:checked").val();
+        var mushroomRadioFour = $("input#mushroomFour:checked").val();
+        var sausageradioFour = $("input#sausageFour:checked").val();
+
+
+        // alert(pepperoniRadioFour)
+        // alert(mushroomRadioFour)
+        // alert(sausageradioFour)
+
+        var inputFour = $("input#inputFourValue").val();
+        // Switch Toggle
+        var deliveryRadioFour = $("input#deliveryFour:checked").val();
 
         // Small section radio.
-        if(smallRadioSeven == undefined && stuffedRadioSeven == undefined && pepperoniRadioSeven == undefined){
-            alert("Make sure you select all fields")
+        
+        if(deliveryRadioFour){
+            var locationFour = prompt("Enter Delivery locationFour: ");
+            if(locationFour == ""){
+                alert("You have not entered a delivery locationFour")
+            }else{
+                alert ("Your order will be delivered in " + locationFour + " at an fee of 500Ksh");
+                if(smallRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var  value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && crispyradioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && crispyradioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && stuffedRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && crispyradioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(smallRadioFour && glutenRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Medium Pizza delivery section
+                else if(mediumRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+            
+                    var  value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && crispyradioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && crispyradioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && stuffedRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && crispyradioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(mediumRadioFour && glutenRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Medium " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+                // Large Radio delivery
+                else if(largeRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var  value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && crispyradioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && crispyradioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && glutenRadioFour && mushroomRadioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && stuffedRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && crispyradioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadioFour +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }else if(largeRadioFour && glutenRadioFour && sausageradioFour && inputFour && deliveryRadioFour){
+                    var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour)
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;
+                    var summation = total + parseInt(deliveryRadioFour);
+                    var checkout = "Size of pizza: Large " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery: " + deliveryRadio +  '\n' + '\n' + "Summation: " +  summation ;
+                    alert( checkout)
+                    alert("The total amounts to: " + summation);
+                }
+            }
         }
-        else if(smallRadioSeven && stuffedRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && crispyRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(crispyRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && gluttenradioSeven && pepperoniRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(gluttenradioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && stuffedRadioSeven && mushroomRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && crispyRadioSeven && mushroomRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(crispyRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && gluttenradioSeven && mushroomRadioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(gluttenradioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && stuffedRadioSeven && sausageradioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && crispyRadioSeven && sausageradioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(crispyRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(smallRadioSeven && gluttenradioSeven && sausageradioSeven){
-            var value = parseInt(smallRadioSeven) + parseInt(gluttenradioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
+        else if(smallRadioFour){
+            if(smallRadioFour == undefined && stuffedRadioFour == undefined && pepperoniRadioFour == undefined){
+                alert("Make sure you select all fields")
+            }else if(smallRadioFour){
+                if(smallRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour){
+                    var  value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && crispyradioFour && pepperoniRadioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && crispyradioFour && mushroomRadioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && glutenRadioFour && mushroomRadioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && stuffedRadioFour && sausageradioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && crispyradioFour && sausageradioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }else if(smallRadioFour && glutenRadioFour && sausageradioFour && inputFour){
+                    var value = parseInt(smallRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour) 
+                    var multiplier = parseInt(inputFour);
+                    var total = value * multiplier;;
+                    var checkout = "Size of pizza: Small " + smallRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                    alert( checkout)
+                    alert("The total amounts to: " + total);
+                }
+            }
         }
-        // Medium radio section
-        else if(mediumRadioSeven && stuffedRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && crispyRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(crispyRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && gluttenradioSeven && pepperoniRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(gluttenradioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && stuffedRadioSeven && mushroomRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && crispyRadioSeven && mushroomRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(crispyRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && gluttenradioSeven && mushroomRadioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(gluttenradioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && stuffedRadioSeven && sausageradioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && crispyRadioSeven && sausageradioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(crispyRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(mediumRadioSeven && gluttenradioSeven && sausageradioSeven){
-            var value = parseInt(mediumRadioSeven) + parseInt(gluttenradioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
+        // Medium section
+        else if(mediumRadioFour){
+            if(mediumRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour){
+                var  value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && crispyradioFour && pepperoniRadioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && crispyradioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && glutenRadioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && stuffedRadioFour && sausageradioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && crispyradioFour && sausageradioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(mediumRadioFour && glutenRadioFour && sausageradioFour && inputFour){
+                var value = parseInt(mediumRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + mediumRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
-        // Large radio section
-        else if(largeRadioSeven && stuffedRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && crispyRadioSeven && pepperoniRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(crispyRadioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && gluttenradioSeven && pepperoniRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(gluttenradioSeven) + parseInt(pepperoniRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && stuffedRadioSeven && mushroomRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && crispyRadioSeven && mushroomRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(crispyRadioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && gluttenradioSeven && mushroomRadioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(gluttenradioSeven) + parseInt(mushroomRadioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && stuffedRadioSeven && sausageradioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(stuffedRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && crispyRadioSeven && sausageradioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(crispyRadioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
-        }else if(largeRadioSeven && gluttenradioSeven && sausageradioSeven){
-            var value = parseInt(largeRadioSeven) + parseInt(gluttenradioSeven) + parseInt(sausageradioSeven) 
-            alert("The total amounts to: " + value)
+        else if(largeRadioFour){
+            if(largeRadioFour && stuffedRadioFour && pepperoniRadioFour && inputFour){
+                var  value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && crispyradioFour && pepperoniRadioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && glutenRadioFour && pepperoniRadioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(pepperoniRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Pepperoni= " + pepperoniRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && stuffedRadioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && crispyradioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && glutenRadioFour && mushroomRadioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(mushroomRadioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Mushroom= " + mushroomRadioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && stuffedRadioFour && sausageradioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(stuffedRadioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Stuffed = " + stuffedRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && crispyradioFour && sausageradioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(crispyradioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Crispy = " + crispyradioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }else if(largeRadioFour && glutenRadioFour && sausageradioFour && inputFour){
+                var value = parseInt(largeRadioFour) + parseInt(glutenRadioFour) + parseInt(sausageradioFour) 
+                var multiplier = parseInt(inputFour);
+                var total = value * multiplier;;
+                var checkout = "Size of pizza: Small " + largeRadioFour + '\n' + "Crusts: Gluten = " + glutenRadioFour + '\n' + "Toppings: Sausage= " + sausageradioFour + '\n' + "Amount: " + inputFour + '\n' + "Delivery:  none " +  '\n' + '\n' + "Summation: " +  total ;
+                alert( checkout)
+                alert("The total amounts to: " + total);
+            }
         }
     })
-
-
     //margherita
     $("form#cheese").submit(function(event){
         event.preventDefault();
