@@ -1,13 +1,4 @@
 <!-- PROJECT LOGO -->
-<div background-color="white" align="center">
-  <h3 align="center">TwstPizza</h3>
-
-  <p align="center">
-    Amazing people are making amazing designs in a fun environment.
-</div>
-<div id="top"></div>
-<br>
-
 ![Alt text](./img/banner.png?=true "about")
 <br>
 <br>
