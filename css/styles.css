@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    font-family: Poppins;
+}
+/* Navigation */
+.navigation i{
+    color: red;
+}
+/* Toppings customizations */
+.title h6{
+    background-color: silver;
+    padding: 10px;
+}
+.title i{
+    color: orangered;
+    float: right;
+}
+.title label span{
+    color: rgb(248, 0, 0);
+}
+.accordion-card{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* Button */
+.btn-padding{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Pizza Images */
+.custom-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.custom-image-col{
+    width: 25%;
+}
+.custom-shadow{
+    box-shadow: 3px 3px 3px 3px whitesmoke;
+}
+
+
+/* Footer */
+.footer{
+    background-color:black;
+    padding: 25px 0;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
