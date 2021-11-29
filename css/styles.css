@@ -13,6 +13,8 @@ body{
 .navigation i{
     color: red;
 }
+/* Carosel images */
+
 /* Toppings customizations */
 .title h6{
     background-color: silver;
@@ -24,6 +26,10 @@ body{
 }
 .title label span{
     color: rgb(248, 0, 0);
+}
+.carosel-title{
+    color: black;
+    size: 30px;
 }
 .accordion-card{
     margin: 0;
@@ -47,7 +53,6 @@ body{
 .custom-shadow{
     box-shadow: 3px 3px 3px 3px whitesmoke;
 }
-
 
 /* Footer */
 .footer{
@@ -115,6 +120,9 @@ ul{
     background-color: black;
     color: white;
 
+}
+.delivery{
+    color: red;
 }
 /* Resposive Website */
 @media(max-width:767px){
